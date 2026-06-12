@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "website" {
-  bucket = "psk-terraform-demo-123456"
+  bucket = var.bucket_name
 }
 
 resource "aws_s3_bucket_public_access_block" "block" {
